@@ -110,6 +110,7 @@ body {
     flex-wrap: wrap;
 }
 .main-post {
+    width: 100%
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
