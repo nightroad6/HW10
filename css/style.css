@@ -25,15 +25,18 @@ body {
     margin-top: -15px;
     width: 23%;
     height: 2rem;
-    background-image: url(../img/search.svg);
-    background-size: 6%;
+    background-image: url(../img/search2.svg);
+    background-size: 90px;
     background-repeat: no-repeat;
-    background-position-x: 35%;
-    background-position-y: 40%;
-    padding-left: 10vh;
+    background-position: center;
     border: 1px solid #DBDBDB;
     box-sizing: border-box;
     border-radius: 3px;
+    padding: 0rem 1rem;
+    background-color: #FAFAFA;
+}
+.form-control:read-write {
+    background-color: #FAFAFA;
 }
 .navbar-nav {
     margin-top: -15px;
@@ -69,7 +72,6 @@ body {
 }
 .btn-follow {
     padding: auto;
-    width: 15%;
     height: 30px;
     margin-left: 3vh;
     margin-right: 1vh;
@@ -80,6 +82,7 @@ body {
     background-size: 60%;
     background-position: center;
     margin-right: 1vh;
+    height: 30px;
 }
 .text {
     font-size: 1.2rem;
@@ -95,6 +98,9 @@ body {
 .circle-wrapper {
     justify-content: center;
 }
+.circle {
+    max-width: 79px;
+}
 .title-circle {
     font-size: 1.5rem;
     margin: 1vh 1vh;
@@ -106,6 +112,7 @@ body {
 .main-post {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .main-title-img {
     width: 22px;
@@ -131,6 +138,9 @@ body {
    
 } 
 @media (max-width: 600px) {
+    .navbar {
+        width: 90%;
+    }
     .form-control {
         width: 25%;
     }
@@ -140,6 +150,7 @@ body {
     }
     .main-img {
         width: 110px;
+        height: 110px;
     }
     
 }
