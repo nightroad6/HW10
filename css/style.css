@@ -1,11 +1,12 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
-body {
-    background: #FAFAFA;
-    
+html {
+    font-size: 18px;
 }
-
+body {
+    background: #FAFAFA;  
+}
 .navbar {
     display: inline-flex;
     justify-content: space-between;
@@ -13,13 +14,10 @@ body {
     border-bottom: 1px solid grey;
     border-bottom-width: 70%;
     height: 50px;
-}
-.navbar-brand {
-    
+    padding: 0.5rem 0;
 }
 .form-inline {
-    margin-top: -15px;
-    
+    margin-top: -15px;  
 }
 .form-control {
     margin-top: -15px;
@@ -41,20 +39,26 @@ body {
 .navbar-nav {
     margin-top: -15px;
     flex-direction: row;
-    width: 12%;
     justify-content: space-between;
     align-items: baseline;
+}
+.nav-icon {
+    margin: 0 2px 0 2px;
 }
 .header-wrap  {
     display: flex;
 }
 .main-img {
-    margin-top: 3vh;
-    width: 154px;
-    height: 153px;
+    padding: 5px;
+    width: 100%;
+    object-fit: scale-down;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 70px;
+    margin: 1rem 0 auto 0;
 }
 .header-aside {
-    margin: 2vh;
+    margin: 2vh 0 2vh 1vh;
     padding: 0;
 }
 .header-aside-1 {
@@ -64,15 +68,17 @@ body {
 .header-aside-2 {
     width: 100%;
     margin-bottom: 2vh;
-    flex-wrap: wrap;
 }
 .title {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.btn {
+    height: 35px;
+    text-align: center;
+    padding: 3px 15px;
+}
 .btn-follow {
-    padding: auto;
-    height: 30px;
     margin-left: 3vh;
     margin-right: 1vh;
 }
@@ -82,38 +88,38 @@ body {
     background-size: 60%;
     background-position: center;
     margin-right: 1vh;
-    height: 30px;
 }
 .text {
     font-size: 1.2rem;
     font-weight: normal;
 }
-.text:nth-child(odd) {
-    font-weight: bold;
-    margin-right: 0.5vh;
-}
-.text:nth-child(even) {
-    margin-right: 1vh;
+.header-aside-text {
+    margin: 0 0.5rem;
 }
 .circle-wrapper {
-    justify-content: center;
+    width: auto;
 }
 .circle {
-    max-width: 79px;
+    width: 100%;
+    padding: 5px;
+    min-width: 60px;
 }
 .title-circle {
     font-size: 1.5rem;
-    margin: 1vh 1vh;
     font-weight: bold;
+    text-align: center;
 }
 .main-container {
     flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 0;
 }
 .main-post {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 4px;
 }
 .main-title-img {
     width: 22px;
@@ -122,45 +128,74 @@ body {
     align-items: baseline;
 }
 .main-wrapper {
-    width: 100%;
-    padding: 0;
+    padding: 0 10px;
+    flex: 30%;
+    max-width: 100%;
+}
+.main-wrapper .main-wrapper-img {
+    margin-top: 8px;
+    vertical-align: middle;
 }
 .main-wrapper-img {
-    max-width: 90%;
-    margin: 2vh 1vh;
+    max-width: 100%;
 }
-
 @media (max-width: 1000px) {
+    html {
+        font-size: 16px;
+    }
     .form-control {
         width: 30%;
     }
-    .main-img {
-        width: 140px;
+    .main-wrapper {
+        flex: 50%;
+    } 
+    .circle {
+        max-width: 120px;
     }
-    .main-wrapper-img {
-        max-width: 90%;
-        min-width: 200px;
-        margin: 2vh;
-   
+}
+@media (max-width: 750px) {
+    html {
+        font-size: 12px;
+    }
+    .main-wrapper {
+        flex: 100%;
+    }
+    .btn {
+        height: 25px;
+    }
 } 
 @media (max-width: 600px) {
+    
     .navbar {
-        width: 90%;
+        width: 100%;
+    }
+    .navbar-brand {
+        max-width: 100px;
     }
     .form-control {
         width: 25%;
     }
-    .main-post {
-        flex-direction: column;
-        margin: 0 auto;
+@media (max-width: 380px) {
+    html {
+        font-size: 11px;
+    }
+    .nav-main-logo {
+        max-width: 90px;
+        margin: 0;
+    }
+    .nav-icon {
+        max-width: 18px;
+    }
+    .form-control {
+        margin-top: -8px;
+    }
+    .navbar-nav {
+        margin-top: -5px;
     }
     .main-img {
-        width: 110px;
-        height: 110px;
+        width: 122%;
     }
-    .main-wrapper-img {
-        max-width: 90%;
-        min-width: 300px;
-        margin: 2vh;
-    
+    .btn-follow {
+        margin-left: 0.5rem;
+    }
 }
